@@ -1,0 +1,246 @@
+-- BFS pb1.pddl --
+(.venv) PS C:\Users\New User\Downloads\Code\Code\heuristic-planning> python Execute_Plan.py logistics pb1.pddl BFS                    
+move
+['r1', 'l1', 'l2']
+frozenset({('adjacent', 'l1', 'l2'), ('at', 'r1', 'l1')})
+frozenset({('occupied', 'l2')})
+frozenset({('occupied', 'l2'), ('at', 'r1', 'l2')})
+frozenset({('occupied', 'l1'), ('at', 'r1', 'l1')})
+---------------------------------------------
+Is the action move applicable? True
+---------------------------------------------
+Resulting state:
+('adjacent', 'l2', 'l1')
+('adjacent', 'l1', 'l2')
+('belong', 'k1', 'l1')
+('empty', 'k1')
+('at', 'r1', 'l2')
+('occupied', 'l2')
+('attached', 'q2', 'l2')
+('attached', 'p1', 'l1')
+('on', 'ca', 'pallet')
+('empty', 'k2')
+---------------------------------------------
+Was the goal achieved? False
+---------------------------------------------
+Expected 6, got: 6. Correct!
+Expected 0, got: 0. Correct!
+Expected 2, got: 2. Correct!
+Expected 2, got: 2. Correct!
+Expected 1, got: 1. Correct!
+Expected 2, got: 2. Correct!
+:constants is not recognized in domain
+Expected 4, got: 4. Correct!
+:constants is not recognized in domain
+Expected 4, got: 4. Correct!
+Expected 16, got: 16. Correct!
+Expected 0, got: 0. Correct!
+Expected 5, got: 5. Correct!
+Expected 5, got: 5. Correct!
+Expected 2, got: 2. Correct!
+Expected 2, got: 2. Correct!
+:constants is not recognized in domain
+Expected 5, got: 5. Correct!
+:constants is not recognized in domain
+Expected 5, got: 5. Correct!
+:constants is not recognized in domain
+Domain: logistics
+Problem: pb1.pddl
+Plan:
+(drive a b)
+(drive b c)
+(load c)
+(drive c d)
+(unload d)
+(drive d c)
+(drive c b)
+(drive b a)
+Plan length: 8
+Expanded nodes: 10
+Heuristic calls: 13
+Execution time: 0.001123666763305664
+******
+-- BFS pb2.pddl --
+(.venv) PS C:\Users\New User\Downloads\Code\Code\heuristic-planning> python Execute_Plan.py logistics pb2.pddl BFS
+move
+['r1', 'l1', 'l2']
+frozenset({('adjacent', 'l1', 'l2'), ('at', 'r1', 'l1')})
+frozenset({('occupied', 'l2')})
+frozenset({('at', 'r1', 'l2'), ('occupied', 'l2')})
+frozenset({('occupied', 'l1'), ('at', 'r1', 'l1')})
+---------------------------------------------
+Is the action move applicable? True
+---------------------------------------------
+Resulting state:
+('adjacent', 'l1', 'l2')
+('attached', 'q2', 'l2')
+('belong', 'k1', 'l1')
+('attached', 'p1', 'l1')
+('empty', 'k2')
+('on', 'ca', 'pallet')
+('empty', 'k1')
+('occupied', 'l2')
+('at', 'r1', 'l2')
+('adjacent', 'l2', 'l1')
+---------------------------------------------
+Was the goal achieved? False
+---------------------------------------------
+Expected 6, got: 6. Correct!
+Expected 0, got: 0. Correct!
+Expected 2, got: 2. Correct!
+Expected 2, got: 2. Correct!
+Expected 1, got: 1. Correct!
+Expected 2, got: 2. Correct!
+:constants is not recognized in domain
+Expected 4, got: 4. Correct!
+:constants is not recognized in domain
+Expected 4, got: 4. Correct!
+Expected 16, got: 16. Correct!
+Expected 0, got: 0. Correct!
+Expected 5, got: 5. Correct!
+Expected 5, got: 5. Correct!
+Expected 2, got: 2. Correct!
+Expected 2, got: 2. Correct!
+:constants is not recognized in domain
+Expected 5, got: 5. Correct!
+:constants is not recognized in domain
+Expected 5, got: 5. Correct!
+:constants is not recognized in domain
+Domain: logistics
+Problem: pb2.pddl
+Plan:
+(drive a b)
+(drive b c)
+(load c)
+(drive c d)
+(unload d)
+Plan length: 5
+Expanded nodes: 6
+Heuristic calls: 8
+Execution time: 0.0012464523315429688
+
+
+******
+-- A* pb1.pddl --
+(.venv) PS C:\Users\New User\Downloads\Code\Code\heuristic-planning> python Execute_Plan.py logistics pb1.pddl A* 
+move
+['r1', 'l1', 'l2']
+frozenset({('at', 'r1', 'l1'), ('adjacent', 'l1', 'l2')})
+frozenset({('occupied', 'l2')})
+frozenset({('at', 'r1', 'l2'), ('occupied', 'l2')})
+frozenset({('at', 'r1', 'l1'), ('occupied', 'l1')})
+---------------------------------------------
+Is the action move applicable? True
+---------------------------------------------
+Resulting state:
+('attached', 'q2', 'l2')
+('at', 'r1', 'l2')
+('belong', 'k1', 'l1')
+('empty', 'k2')
+('empty', 'k1')
+('attached', 'p1', 'l1')
+('adjacent', 'l2', 'l1')
+('occupied', 'l2')
+('adjacent', 'l1', 'l2')
+('on', 'ca', 'pallet')
+---------------------------------------------
+Was the goal achieved? False
+---------------------------------------------
+Expected 6, got: 6. Correct!
+Expected 0, got: 0. Correct!
+Expected 2, got: 2. Correct!
+Expected 2, got: 2. Correct!
+Expected 1, got: 1. Correct!
+Expected 2, got: 2. Correct!
+:constants is not recognized in domain
+Expected 4, got: 4. Correct!
+:constants is not recognized in domain
+Expected 4, got: 4. Correct!
+Expected 16, got: 16. Correct!
+Expected 0, got: 0. Correct!
+Expected 5, got: 5. Correct!
+Expected 5, got: 5. Correct!
+Expected 2, got: 2. Correct!
+Expected 2, got: 2. Correct!
+:constants is not recognized in domain
+Expected 5, got: 5. Correct!
+:constants is not recognized in domain
+Expected 5, got: 5. Correct!
+:constants is not recognized in domain
+Domain: logistics
+Problem: pb1.pddl
+Plan:
+(drive a b)
+(drive b c)
+(load c)
+(drive c d)
+(unload d)
+(drive d c)
+(drive c b)
+(drive b a)
+Plan length: 8
+Expanded nodes: 11
+Heuristic calls: 13
+Execution time: 0.0013375282287597656
+
+
+
+******
+-- A* pb2.pddl --
+(.venv) PS C:\Users\New User\Downloads\Code\Code\heuristic-planning> python Execute_Plan.py logistics pb2.pddl A* 
+move
+['r1', 'l1', 'l2']
+frozenset({('at', 'r1', 'l1'), ('adjacent', 'l1', 'l2')})
+frozenset({('occupied', 'l2')})
+frozenset({('occupied', 'l2'), ('at', 'r1', 'l2')})
+frozenset({('occupied', 'l1'), ('at', 'r1', 'l1')})
+---------------------------------------------
+Is the action move applicable? True
+---------------------------------------------
+Resulting state:
+('empty', 'k1')
+('adjacent', 'l1', 'l2')
+('on', 'ca', 'pallet')
+('attached', 'p1', 'l1')
+('attached', 'q2', 'l2')
+('at', 'r1', 'l2')
+('occupied', 'l2')
+('belong', 'k1', 'l1')
+('empty', 'k2')
+('adjacent', 'l2', 'l1')
+---------------------------------------------
+Was the goal achieved? False
+---------------------------------------------
+Expected 6, got: 6. Correct!
+Expected 0, got: 0. Correct!
+Expected 2, got: 2. Correct!
+Expected 2, got: 2. Correct!
+Expected 1, got: 1. Correct!
+Expected 2, got: 2. Correct!
+:constants is not recognized in domain
+Expected 4, got: 4. Correct!
+:constants is not recognized in domain
+Expected 4, got: 4. Correct!
+Expected 16, got: 16. Correct!
+Expected 0, got: 0. Correct!
+Expected 5, got: 5. Correct!
+Expected 5, got: 5. Correct!
+Expected 2, got: 2. Correct!
+Expected 2, got: 2. Correct!
+:constants is not recognized in domain
+Expected 5, got: 5. Correct!
+:constants is not recognized in domain
+Expected 5, got: 5. Correct!
+:constants is not recognized in domain
+Domain: logistics
+Problem: pb2.pddl
+Plan:
+(drive a b)
+(drive b c)
+(load c)
+(drive c d)
+(unload d)
+Plan length: 5
+Expanded nodes: 6
+Heuristic calls: 8
+Execution time: 0.0
